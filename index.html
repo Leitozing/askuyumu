@@ -374,13 +374,16 @@
             const totalyuzde = randomyuzde + burcUyumu;
             const description = "İkiniz arasında güçlü bir uyum var. Zorluklar karşısında birlikte hareket ederek ilişkiyi güçlendirebilirsiniz. Sevgi, saygı ve güven bağlarınızı sıkı tutarak daha uyumlu bir birliktelik kurabilirsiniz.";
     
-            document.getElementById("yuzde").innerText = `%${totalyuzde}`;
-            document.getElementById("description").innerText = description;
-    
             if (erkekAdi == "Halit" && kadinAdi == "Betül")
             {
                 totalyuzde = 100;
             }
+
+
+
+            document.getElementById("yuzde").innerText = `%${totalyuzde}`;
+            document.getElementById("description").innerText = description;
+    
 
 
             const sonucDiv = document.getElementById("sonuc");
