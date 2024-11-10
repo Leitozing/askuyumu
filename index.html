@@ -373,11 +373,6 @@
 
     
             totalyuzde = randomyuzde + burcUyumu;
-  
-            if (totalyuzde > 100) {
-                totalyuzde = 100;
-            }
-
 
             if (totalyuzde < 30) {
             aciklama = "sizden olmaz.";
@@ -388,6 +383,14 @@
             } else {
             aciklama = "ruh eşini bulmuşsun haberin yok";
             }
+
+            if (totalyuzde > 100) {
+                totalyuzde = 100;
+                aciklama = "umarım evlenirsiniz canlarım <3";
+            }
+
+
+
 
             document.getElementById("yuzde").innerText = `%${totalyuzde}`;
             document.getElementById("aciklama").innerText = aciklama;
