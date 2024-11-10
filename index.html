@@ -181,7 +181,7 @@
 
         <div id="sonuc" class="sonuc">
             <div class="yuzde" id="yuzde">%</div>
-            <p id="description"></p>
+            <p id="aciklama"></p>
         </div>
     </div>
 
@@ -206,7 +206,7 @@
             if (previoussonucs[nameKey] !== undefined) {
                 randomyuzde = previoussonucs[nameKey];
             } else {
-                randomyuzde = Math.floor(Math.random() * 31);
+                randomyuzde = Math.floor(Math.random() * 41);
                 previoussonucs[nameKey] = randomyuzde;
             }
     
@@ -372,11 +372,19 @@
 
     
             totalyuzde = randomyuzde + burcUyumu;
-            const description = "İkiniz arasında güçlü bir uyum var. Zorluklar karşısında birlikte hareket ederek ilişkiyi güçlendirebilirsiniz. Sevgi, saygı ve güven bağlarınızı sıkı tutarak daha uyumlu bir birliktelik kurabilirsiniz.";
-    
+  
+            if (totalyuzde < 30) {
+            aciklama = "sizden olmaz.";
+            } else if (totalyuzde >= 30 && totalyuzde < 60) {
+            aciklama = "daha iyisini bulabilirsin.";
+            } else if (totalyuzde >= 60 && totalyuzde < 80) {
+            aciklama = "olur bu iş";
+            } else {
+            aciklama = "ruh eşini bulmuşsun haberin yok";
+            }
 
             document.getElementById("yuzde").innerText = `%${totalyuzde}`;
-            document.getElementById("description").innerText = description;
+            document.getElementById("aciklama").innerText = aciklama;
     
 
 
