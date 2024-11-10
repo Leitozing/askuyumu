@@ -374,6 +374,11 @@
     
             totalyuzde = randomyuzde + burcUyumu;
   
+            if (totalyuzde > 100) {
+                totalyuzde = 100;
+            }
+
+
             if (totalyuzde < 30) {
             aciklama = "sizden olmaz.";
             } else if (totalyuzde >= 30 && totalyuzde < 60) {
