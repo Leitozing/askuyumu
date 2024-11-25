@@ -177,7 +177,7 @@
             </div>
         </div>
 
-        <button class="butonum" onclick="calculateLove()">Hesapla!</button>
+        <button class="butonum" onclick="hesaplama_fonk()">Hesapla!</button>
 
         <div id="sonuc" class="sonuc">
             <div class="yuzde" id="yuzde">%</div>
@@ -188,7 +188,7 @@
     <script>
         const previoussonucs = {};
     
-        function calculateLove() {
+        function hesaplama_fonk() {
             const erkekAdi = document.getElementById("erkekAdi").value.trim();
             const kadinAdi = document.getElementById("kadinAdi").value.trim();
             const erkekBurcu = document.getElementById("burc1").value;
@@ -393,8 +393,6 @@
             if (totalyuzde > 100) {
                 aciklama = "umarım evlenirsiniz canlarım <3";
                 totalyuzde = 100;
-                document.body.style.backgroundImage = url("pngwing.com (5)");
-
             }
 
 
