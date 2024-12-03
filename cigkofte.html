@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>ömerle çiğköfte</title>
     <style>
         body {
@@ -21,7 +21,7 @@
             margin: 0;
             padding: 20px 0;
             width: 100%;
-            position: fixed;
+            position: fixed; /* header sabit kalıyor */
             top: 0;
             left: 0;
             z-index: 1000;
@@ -31,7 +31,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         .photo-container {
-            margin-top: 110px;
+            margin-top: 120px;
             width: 400px;
             height: 500px;
             border: 2px solid black;
@@ -80,6 +80,24 @@
             background-color: #f44336;
             color: white;
         }
+
+        /* Mobil ölçeklendirme */
+        @media (max-width: 768px) {
+            body {
+                transform: scale(0.9); /* sayfayı küçültür ki ekrana sığsın */
+                transform-origin: top center;
+            }
+            .photo-container {
+                width: 300px; /* mobil için daha küçük */
+                height: 400px;
+            }
+            h1 {
+                font-size: 40px; /* başlığı mobil için küçült */
+            }
+            .button-container {
+                width: 80%; /* buton container daha dar */
+            }
+        }
     </style>
 </head>
 <body>
@@ -94,8 +112,7 @@
 
     <script>
         const hayirButton = document.getElementById('hayir-button');
-
-        evetButton = document.getElementById('evet-button');
+        const evetButton = document.getElementById('evet-button');
 
         hayirButton.addEventListener('mouseover', () => {
             const container = hayirButton.parentElement;
@@ -115,7 +132,8 @@
         hayirButton.addEventListener('click', () => {
             alert('hayır diye bi seçenek yok nası bastın amk');
         });
-        evetButton.addEventListener('click', () =>{
+
+        evetButton.addEventListener('click', () => {
             alert('param yok sen ısmarlican');
         });
     </script>
