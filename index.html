@@ -228,6 +228,9 @@
             } else {
             randomyuzde = Math.floor(Math.random() * 41);
             previoussonucs[nameKey] = randomyuzde;
+            if (erkekAdi === "Ömer" && kadinAdi === "Şevval"){
+            randomyuzde = 0;
+            }
         }
             let burcUyumu = 0;
 
@@ -393,7 +396,7 @@
             totalyuzde = randomyuzde + burcUyumu;
 
             if (totalyuzde < 30) {
-            aciklama = "sizden olmaz.";
+            aciklama = "ilişki dediğin güven ister.. maalesef.";
             } else if (totalyuzde >= 30 && totalyuzde < 60) {
             aciklama = "daha iyisini bulabilirsin.";
             } else if (totalyuzde >= 60 && totalyuzde < 80) {
